@@ -89,11 +89,11 @@ namespace lab1
                         try
                         {
                             Console.WriteLine("Введите высоту H (м): "); double H = Double.Parse(Console.ReadLine());
-                            if (H < 0)
-                                throw new ArgumentException("Высота не может быть отрицательной!");
+                            if (H <= 0)
+                                throw new ArgumentException("Высота не может быть отрицательной или равняться нулю!");
                             Console.WriteLine("Введите начальную скорость V (м/c): "); double V = Double.Parse(Console.ReadLine());
-                            if (V < 0)
-                                throw new ArgumentException("Скорость не может быть отрицательной!");
+                            if (V <= 0)
+                                throw new ArgumentException("Скорость не может быть отрицательной или равняться нулю!");
 
                             double discriminant = V * V + 2 * g * H;
                             if (discriminant < 0)
